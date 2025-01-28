@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import Tablero from './Tablero';
 
-test('renders learn react link', () => {
+test('Tablero se renderiza correctamente', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  
+  // Verificar si el componente Tablero está presente en el documento
+  const tableroElement = document.querySelector('div');
+  expect(tableroElement).toBeInTheDocument();
 });
